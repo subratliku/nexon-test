@@ -15,9 +15,14 @@ class LoginPage():
             return None
     def get_login_button(self):
         try:
-            return  self.driver.find_element_by_id('u_0_8')
+            return self.driver.find_element_by_id('u_0_2')
         except:
             return None
     def wait_for_login_page_to_load(self):
         wait=WebDriverWait(driver=self.driver,timeout=30)
-        wait.until(expected_conditions.visibility_of(self.driver.find_element_by_css_selector('.clearfix.loggedout_menubar')))
+        wait.until(expected_conditions.visibility_of(self.driver.find_element_by_id('u_0_b')))
+    def get_login_error_msg(self):
+        try:
+            return self.driver.find_element_by_xpath("//div[contains(text(),'The password that')]")
+        except:
+            return None

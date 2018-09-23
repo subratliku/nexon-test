@@ -1,3 +1,3 @@
 [
-  "test/smoke/test_sample.py::TestSample::test_title_of_webpage"
+  "test/regression/login/test_login_s13876.py::TestLoginS13876::test_login_invalid_tc156789"
 ]

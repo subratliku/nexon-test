@@ -15,7 +15,7 @@ class LoginPage():
             return None
     def get_login_button(self):
         try:
-            return self.driver.find_element_by_id('u_0_2')
+            return self.driver.find_element_by_css_selector("input[aria-label='Log In']")
         except:
             return None
     def wait_for_login_page_to_load(self):
